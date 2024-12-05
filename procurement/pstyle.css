@@ -1,0 +1,306 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h1 {
+    color: #555;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+/* Form Styling */
+form {
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn{
+    background-color: red;
+}
+
+.delete-btn:hover{
+    background-color: #721c24;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Message Box Styles */
+.message-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-box {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.success-box {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, textarea, button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    table {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    th, td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}
+/* Modal Styling */
+#updateModal {
+    display: none;  /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+    z-index: 1000;  /* Ensure it's on top of other content */
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+/* Modal Content */
+#updateModal > div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Modal Header */
+#updateModal h2 {
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Close Button */
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+#closeModal:hover {
+    color: #f44336;  /* Red color on hover */
+}
+
+/* Form Styling Inside Modal */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input and Textarea Styling */
+input, textarea  {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color:#007bff; /* Green color for back button */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: auto; /* Keep the home button with natural width */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+button:active {
+    background-color: #004085; /* Even darker green when clicked */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #updateModal > div {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #updateModal h2 {
+        font-size: 1.4rem;
+    }
+
+    label, input, textarea, button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #updateModal h2 {
+        font-size: 1.2rem;
+    }
+
+    label, input, textarea, button {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    #closeModal {
+        font-size: 1.2rem;
+    }
+}
